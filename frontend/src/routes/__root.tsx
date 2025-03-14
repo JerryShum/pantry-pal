@@ -1,18 +1,14 @@
+import Navbar from "@/components/common/Navbar";
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
 
 export const Route = createRootRoute({
   component: () => (
-    <>
-      <div className="flex gap-2 p-2">
-        <Link to="/" className="[&.active]:font-bold">
-          Home
-        </Link>{" "}
-        <Link to="/about" className="[&.active]:font-bold">
-          About
-        </Link>
-      </div>
+    <div className="flex h-screen flex-col">
+      <Navbar />
       <hr />
-      <Outlet />
-    </>
+      <div className="flex-1 overflow-auto">
+        <Outlet />
+      </div>
+    </div>
   ),
 });
