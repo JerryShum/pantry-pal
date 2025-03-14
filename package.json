@@ -7,6 +7,12 @@
   },
   "devDependencies": {
     "drizzle-kit": "^0.30.5",
-    "tsx": "^4.19.3"
+    "tsx": "^4.19.3",
+    "@types/bun": "latest"
+  },
+  "name": "pantry-pal",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }
