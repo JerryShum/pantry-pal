@@ -5,17 +5,8 @@ export default function Navbar() {
       <Link to="/" className="[&.active]:font-bold">
         Home
       </Link>{" "}
-      <Link to="/about" className="[&.active]:font-bold">
-        About
-      </Link>
-      <Link to="/expenses" className="[&.active]:font-bold">
-        Expenses
-      </Link>
-      <Link to="/create-expense" className="[&.active]:font-bold">
-        Create Expenses
-      </Link>
-      <Link to="/profile" className="[&.active]:font-bold">
-        Profile
+      <Link to="/recipes" className="[&.active]:font-bold">
+        Recipes
       </Link>
     </nav>
   );
