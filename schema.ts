@@ -1,11 +1,6 @@
 // src/db/schema.js
 import type { InferSelectModel } from 'drizzle-orm';
-import {
-   sqliteTable,
-   text,
-   integer,
-   primaryKey,
-} from 'drizzle-orm/sqlite-core';
+import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
 
 // Recipes Table
 export const recipes = sqliteTable('recipes', {

@@ -1,4 +1,4 @@
-import React from "react";
+import { Recipe } from "../../../../schema";
 import {
   Card,
   CardContent,
@@ -6,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "../UI/card";
-import { Recipe } from "../../../../schema";
 
 export default function RecipeCard({
   title,
