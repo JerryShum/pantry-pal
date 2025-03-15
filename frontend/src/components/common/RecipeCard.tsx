@@ -1,5 +1,11 @@
 import React from "react";
-import { Card, CardContent, CardHeader } from "../UI/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../UI/card";
 import { Recipe } from "../../../../schema";
 
 export default function RecipeCard({
@@ -10,16 +16,22 @@ export default function RecipeCard({
   instructions,
 }: Recipe) {
   return (
-    <Card>
+    <Card className="border-muted-foreground border drop-shadow-lg">
       <CardHeader>
-        <h2>{title}</h2>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-2">
-          <img src={imageUrl ?? ""} alt={title} />
-          <p>Ingredients: {ingredients}</p>
-          <p>{description}</p>
-          <p>{instructions}</p>
+          <img src={imageUrl ?? ""} alt={title} className="rounded-lg" />
+          <div>
+            <h2 className="text-lg font-semibold">Ingredients:</h2>
+            <p className="capitalize">{ingredients}</p>
+          </div>
+          <div>
+            <h2 className="text-lg font-semibold">Instructions:</h2>
+            <p>{instructions}</p>
+          </div>
         </div>
       </CardContent>
     </Card>
