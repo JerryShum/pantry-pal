@@ -55,7 +55,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="bg-background text-foreground h-full px-60 py-20">
+    <div className="bg-background text-foreground h-full px-60 py-10">
       <header className="flex flex-col items-center">
         <h1 className="text-primary mb-10 text-center text-6xl font-semibold">
           Pantry Pal
