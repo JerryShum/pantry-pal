@@ -1,4 +1,5 @@
 // src/db/schema.js
+import type { InferSelectModel } from 'drizzle-orm';
 import {
    sqliteTable,
    text,
@@ -11,6 +12,7 @@ export const recipes = sqliteTable('recipes', {
    id: integer('id').primaryKey({ autoIncrement: true }), // Auto-incrementing ID
    title: text('title').notNull(), // Recipe title
    description: text('description'), // Short description of the recipe
+   ingredients: text('ingredients').notNull(), // List of ingredients
    instructions: text('instructions').notNull(), // Step-by-step instructions
    imageUrl: text('image_url'), // URL for the recipe image
    createdAt: integer('created_at', { mode: 'timestamp' }).notNull(), // Timestamp for creation
@@ -36,3 +38,7 @@ export const favorites = sqliteTable('favorites', {
    userId: integer('user_id').notNull(), // User ID (for future user authentication)
    createdAt: integer('created_at', { mode: 'timestamp' }).notNull(), // Timestamp for creation
 });
+
+export type Recipe = InferSelectModel<typeof recipes>;
+export type Ingredient = InferSelectModel<typeof ingredients>;
+export type Favorite = InferSelectModel<typeof favorites>;
