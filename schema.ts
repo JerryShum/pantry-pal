@@ -15,8 +15,8 @@ export const recipes = sqliteTable('recipes', {
    ingredients: text('ingredients').notNull(), // List of ingredients
    instructions: text('instructions').notNull(), // Step-by-step instructions
    imageUrl: text('image_url'), // URL for the recipe image
-   createdAt: integer('created_at', { mode: 'timestamp' }).notNull(), // Timestamp for creation
-   updatedAt: integer('updated_at', { mode: 'timestamp' }).notNull(), // Timestamp for last update
+   createdAt: text('created_at').notNull(), // Timestamp for creation
+   updatedAt: text('updated_at').notNull(), // Timestamp for last update
 });
 
 // Ingredients Table

@@ -15,6 +15,13 @@
       "when": 1741999109436,
       "tag": "0001_late_thundra",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1742045623526,
+      "tag": "0002_high_reaper",
+      "breakpoints": true
     }
   ]
 }
